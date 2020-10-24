@@ -1,0 +1,21 @@
+{
+  "name": "assignment",
+  "version": "1.0.0",
+  "description": "nodejs express mongodb rest api",
+  "main": "index.js",
+  "scripts": {
+    "test": "NODE_ENV=test jest --forceExit",
+	"test:watch": "jest --watch"
+  },
+  "author": "burakcanekici",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongodb": "^3.6.2",
+    "mongoose": "^5.10.9"
+  },
+  "devDependencies": {
+    "jest": "^26.6.1",
+    "supertest": "^5.0.0"
+  }
+}
