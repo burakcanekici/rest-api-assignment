@@ -10,7 +10,7 @@ Since, according to documentation, the application has a single endpoint, the en
 - *maxCount*; which is an optional, so it can't be sent in body or it can be sent empty. In this case, the read opearitons is executed without any maximum count.
 
 The following image is the example of how to make POST request to the endpoint described in here as *https://getir-rest-api.herokuapp.com?getByParam*;
-![alt text](https://github.com/burakcanekici/rest-api-assignment/blob/main/images/Postman.PNG)
+<kbd>![alt text](https://github.com/burakcanekici/rest-api-assignment/blob/main/images/Rest.PNG)</kbd>
 ## Error Handling
 
 The following custom error types are defined for this application;
@@ -24,6 +24,7 @@ The following custom error types are defined for this application;
 ## Unit and/or Integration Tests
 
 For the test of application, the Jest was preferable. The following 6 cases have been implemented; 
+
 
 ```javascript
 describe("Fill all parameters", () => {
@@ -89,6 +90,7 @@ describe("Fill all parameters", () => {
     });
 });
 ```
+
 The result of these 6 cases are shown below; 
 
-![alt text](https://github.com/burakcanekici/rest-api-assignment/blob/main/images/TestCase2.PNG)
+<kbd>![alt text](https://github.com/burakcanekici/rest-api-assignment/blob/main/images/TestCase.PNG)</kbd>
