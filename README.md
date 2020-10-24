@@ -96,8 +96,8 @@ describe("Fill all parameters", () => {
 		    });
         expect(response.status).toBe(200);
     });
-    	
-	  it('the startDate is in invalid format', async () => {
+    
+    it('the startDate is in invalid format', async () => {
         const response = await request.post('/getByParam').send({
 			    "startDate" : "2015-36-02",
 			    "endDate" : "2015-06-06",
@@ -106,8 +106,8 @@ describe("Fill all parameters", () => {
 		    });
         expect(response.status).toBe(422);
     });
-	
-	it('the startDate is empty', async () => {
+    
+    it('the startDate is empty', async () => {
         const response = await request.post('/getByParam').send({
 			    "endDate" : "2015-06-06",
 			    "minCount" : "100",
@@ -115,8 +115,8 @@ describe("Fill all parameters", () => {
 		    });
         expect(response.status).toBe(200);
     });
-	
-	it('the endDate is in invalid format', async () => {
+    
+    it('the endDate is in invalid format', async () => {
         const response = await request.post('/getByParam').send({
 			    "startDate" : "2015-06-06",
 			    "endDate" : "2015-36-06",
@@ -125,8 +125,8 @@ describe("Fill all parameters", () => {
 		    });
         expect(response.status).toBe(422);
     });
-	
-	it('the 6 records should be returned', async () => {
+    
+    it('the 6 records should be returned', async () => {
         const response = await request.post('/getByParam').send({
 			    "startDate" : "2015-06-02",
 			    "endDate" : "2015-06-06",
@@ -136,8 +136,8 @@ describe("Fill all parameters", () => {
         expect(response.status).toBe(200);
         expect(response.body.records).toHaveLength(6);
     });
-	
-	it('just the record whose key should be equal to dQsDsrfD', async () => {
+    
+    it('just the record whose key should be equal to dQsDsrfD', async () => {
         const response = await request.post('/getByParam').send({
 			    "startDate" : "2015-06-02",
 			    "endDate" : "2015-06-06",
