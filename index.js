@@ -55,7 +55,7 @@ app.post('/getByParam', async function (req, res, next) {
 		const totalCount = record.counts.reduce((a,b) => a + b, 0 );
 		modifyCountsArray(record, 'counts', 'totalCount', totalCount); // The "counts" key are updated to "totalCount" and their value are set to totalCount of array
 		pickKeys(record, ['key', 'createdAt', 'totalCount']);  // Only "key", "createdAt", and "totalCount" keys are kept because only those are desired.
-		return !(_minCount != undefined && _minCount != '' && totalCount < _minCount) & !(_maxCount != undefined && _maxCount != '' && totalCount > _maxCount);
+		return !(_minCount != undefined && _minCount != '' && totalCount <= _minCount) & !(_maxCount != undefined && _maxCount != '' && totalCount >= _maxCount);
 	});
 	
 	/* Since the records filter by the parameters we take, they return in the desired format. */  
